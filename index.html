@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHUWEN'DIAN</title>
+    <link rel="icon" href="image/iconn.jpg" type="image/x-icon">
+    <style>
+        .item-H {
+            grid-area: header;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .item-L {
+            grid-area: lside;
+            height: 1800px;
+            align-items: center;
+            justify-content: center;
+        }
+        .item-M {
+            grid-area: main;
+            height: 1800px;
+        }
+        .item-F {
+            grid-area: footer;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gridcontainer {
+            display: grid;
+            grid-template-areas:
+            'header header header header header'
+            'lside main main main main'
+            'footer footer footer footer footer';
+            grid-gap: 5px;
+            padding: 10px;
+        }
+        .item-red {
+            background-color: #ddb899;
+            border: 2px solid #8e1f1b; 
+            padding: 30px; 
+            font-size: 20px;
+            text-align: center; 
+        }
+        .item-SPink {
+            background-color: #ddb899;
+            border: 2px solid #260101; 
+            padding: 30px; 
+            font-size: 20px;
+            text-align: center; 
+        }
+        @font-face {
+            font-family: 'THSarabun';
+            src: url(font/THSarabun/THSarabun.ttf);
+        }
+       
+    </style>
+    <link rel="stylesheet" href="button.css">
+</head>
+<body style="background-color: #400106;">
+    <div class="gridcontainer">
+        <div class="item-H item-red">
+            <img src="image/Logo.png" alt="Header">
+        </div>
+        <div class="item-L item-SPink">
+            <p style="font-family: 'THSarabun'; font-size: 40px; color: #402814;"><b>เมนู</b></p>
+            <a href="register.html">
+                <button style="margin: auto;">
+                    <span style="font-family: 'THSarabun';">สมัครสมาชิก</span>
+                </button>
+            </a>
+        </div>
+        <div class="item-M item-SPink">
+            <p style="font-family: 'THSarabun'; font-size: 40px; color: #402814;"><b>รายการสินค้า</b></p>
+            <form action="https://httpbin.org/post" method="post">
+                <table style="display: flex; align-items: center; justify-content: center;">
+                    <tr style="color: #422d20; font-family: 'THSarabun'; font-size: 25px;">
+                        <th>
+                            สวรรค์ประทานพร <br>เล่ม 1
+                        </th>
+                        <th>
+                            สวรรค์ประทานพร <br>เล่ม 2
+                        </th>
+                        <th>
+                            สวรรค์ประทานพร <br>เล่ม 3
+                        </th>
+                        <th>
+                            สวรรค์ประทานพร <br>เล่ม 4
+                        </th>
+                        <th>
+                            สวรรค์ประทานพร <br>เล่ม 5
+                        </th>
+                     
+                    </tr>
+                    <tr>
+                        <th style="height: 250px;"><img src="image/h1.jpg" style="height: 200px;"></th>
+                        <th style="height: 250px;"><img src="image/h2.jpg" style="height: 200px;"></th>
+                        <th style="height: 250px;"><img src="image/h3.jpg" style="height: 200px;"></th>
+                        <th style="height: 250px;"><img src="image/h4.jpg" style="height: 200px;"></th>
+                        <th style="height: 250px;"><img src="image/h5.jpg" style="height: 200px;"></th>
+                    </tr>
+                    <tr style="color: #422d20;">
+                        <th>
+                            <label for="quanbookid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                            <select id="quanbookid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                <option value="0 book">ไม่รับสินค้า</option>
+                                <option value="1 book">1 ชิ้น</option>
+                                <option value="2 books">2 ชิ้น</option>
+                                <option value="3 books">3 ชิ้น</option>
+                                <option value="4 books">4 ชิ้น</option>
+                            </select>
+                        </th>
+                        <th>
+                            <label for="quanipadid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                            <select id="quanipadid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                <option value="0 book">ไม่รับสินค้า</option>
+                                <option value="1 book">1 ชิ้น</option>
+                                <option value="2 books">2 ชิ้น</option>
+                                <option value="3 books">3 ชิ้น</option>
+                                <option value="4 books">4 ชิ้น</option>
+                            </select>
+                        </th>
+                        <th>
+                            <label for="quanpencilid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                            <select id="quanpencilid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                <option value="0 book">ไม่รับสินค้า</option>
+                                <option value="1 book">1 ชิ้น</option>
+                                <option value="2 books">2 ชิ้น</option>
+                                <option value="3 books">3 ชิ้น</option>
+                                <option value="4 books">4 ชิ้น</option>
+                            </select>
+                        </th>
+                        <th>
+                            <label for="quanpencilid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                            <select id="quanpencilid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                <option value="0 book">ไม่รับสินค้า</option>
+                                <option value="1 book">1 ชิ้น</option>
+                                <option value="2 books">2 ชิ้น</option>
+                                <option value="3 books">3 ชิ้น</option>
+                                <option value="4 books">4 ชิ้น</option>
+                            </select>
+                        </th>
+                        <th>
+                            <label for="quanpencilid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                            <select id="quanpencilid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                <option value="0 book">ไม่รับสินค้า</option>
+                                <option value="1 book">1 ชิ้น</option>
+                                <option value="2 books">2 ชิ้น</option>
+                                <option value="3 books">3 ชิ้น</option>
+                                <option value="4 books">4 ชิ้น</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr style="color: #422d20; font-family: 'THSarabun'; font-size: 25px;">
+                        <th>
+                            สวรรค์ประทานพร <br>เล่ม 6
+                        </th>
+                        <th>
+                            สวรรค์ประทานพร <br>เล่ม 7
+                        </th>
+                        <th>
+                            สวรรค์ประทานพร <br>เล่ม 8
+                        </th>
+                        <th>
+                            เทียบท้าปฐพี <br>เล่ม 1
+                        </th>
+                        <th>
+                            เทียบท้าปฐพี <br>เล่ม 2
+                        </th>
+                     
+                    </tr>
+                    <tr>
+                        <th style="height: 250px;"><img src="image/h6.jpg" style="height: 200px;"></th>
+                        <th style="height: 250px;"><img src="image/h7.jpg" style="height: 200px;"></th>
+                        <th style="height: 250px;"><img src="image/h8.jpg" style="height: 200px;"></th>
+                        <th style="height: 250px;"><img src="image/t1.jpg" style="height: 200px;"></th>
+                        <th style="height: 250px;"><img src="image/t2.jpg" style="height: 200px;"></th>
+                    </tr>
+                    <tr style="color: #422d20;">
+                        <th>
+                            <label for="quanbookid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                            <select id="quanbookid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                <option value="0 book">ไม่รับสินค้า</option>
+                                <option value="1 book">1 ชิ้น</option>
+                                <option value="2 books">2 ชิ้น</option>
+                                <option value="3 books">3 ชิ้น</option>
+                                <option value="4 books">4 ชิ้น</option>
+                            </select>
+                        </th>
+                        <th>
+                            <label for="quanipadid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                            <select id="quanipadid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                <option value="0 book">ไม่รับสินค้า</option>
+                                <option value="1 book">1 ชิ้น</option>
+                                <option value="2 books">2 ชิ้น</option>
+                                <option value="3 books">3 ชิ้น</option>
+                                <option value="4 books">4 ชิ้น</option>
+                            </select>
+                        </th>
+                        <th>
+                            <label for="quanipadid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                            <select id="quanipadid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                <option value="0 book">ไม่รับสินค้า</option>
+                                <option value="1 book">1 ชิ้น</option>
+                                <option value="2 books">2 ชิ้น</option>
+                                <option value="3 books">3 ชิ้น</option>
+                                <option value="4 books">4 ชิ้น</option>
+                            </select>
+                        </th>
+                        <th>
+                            <label for="quanipadid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                            <select id="quanipadid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                <option value="0 book">ไม่รับสินค้า</option>
+                                <option value="1 book">1 ชิ้น</option>
+                                <option value="2 books">2 ชิ้น</option>
+                                <option value="3 books">3 ชิ้น</option>
+                                <option value="4 books">4 ชิ้น</option>
+                            </select>
+                        </th>
+                        <th>
+                            <label for="quanpencilid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                            <select id="quanpencilid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                <option value="0 book">ไม่รับสินค้า</option>
+                                <option value="1 book">1 ชิ้น</option>
+                                <option value="2 books">2 ชิ้น</option>
+                                <option value="3 books">3 ชิ้น</option>
+                                <option value="4 books">4 ชิ้น</option>
+                            </select>
+                        </th>
+                    </tr>
+                        <tr style="color: #422d20; font-family: 'THSarabun'; font-size: 25px;">
+                            <th>
+                                เทียบท้าปฐพี <br>เล่ม 3
+                            </th>
+                            <th>
+                                วาสนาของปลาเค็ม <br>เล่ม 1
+                            </th>
+                            <th>
+                                วาสนาของปลาเค็ม <br>เล่ม 2
+                            </th>
+                            <th>
+                                วาสนาของปลาเค็ม <br>เล่ม 3
+                            </th>
+                            <th>
+                                ผลาญ <br>เล่ม 1
+                            </th>
+                         
+                        </tr>
+                        <tr>
+                            <th style="height: 250px;"><img src="image/t3.jpg" style="height: 200px;"></th>
+                            <th style="height: 250px;"><img src="image/v1.jpg" style="height: 200px;"></th>
+                            <th style="height: 250px;"><img src="image/v2.jpg" style="height: 200px;"></th>
+                            <th style="height: 250px;"><img src="image/v3.jpg" style="height: 200px;"></th>
+                            <th style="height: 250px;"><img src="image/p1.jpg" style="height: 200px;"></th>
+                        </tr>
+                        <tr style="color: #422d20;">
+                            <th>
+                                <label for="quanbookid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                                <select id="quanbookid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                    <option value="0 book">ไม่รับสินค้า</option>
+                                    <option value="1 book">1 ชิ้น</option>
+                                    <option value="2 books">2 ชิ้น</option>
+                                    <option value="3 books">3 ชิ้น</option>
+                                    <option value="4 books">4 ชิ้น</option>
+                                </select>
+                            </th>
+                            <th>
+                                <label for="quanipadid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                                <select id="quanipadid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                    <option value="0 book">ไม่รับสินค้า</option>
+                                    <option value="1 book">1 ชิ้น</option>
+                                    <option value="2 books">2 ชิ้น</option>
+                                    <option value="3 books">3 ชิ้น</option>
+                                    <option value="4 books">4 ชิ้น</option>
+                                </select>
+                            </th>
+                            <th>
+                                <label for="quanpencilid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                                <select id="quanpencilid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                    <option value="0 book">ไม่รับสินค้า</option>
+                                    <option value="1 book">1 ชิ้น</option>
+                                    <option value="2 books">2 ชิ้น</option>
+                                    <option value="3 books">3 ชิ้น</option>
+                                    <option value="4 books">4 ชิ้น</option>
+                                </select>
+                            </th>
+                            <th>
+                                <label for="quanpencilid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                                <select id="quanpencilid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                    <option value="0 book">ไม่รับสินค้า</option>
+                                    <option value="1 book">1 ชิ้น</option>
+                                    <option value="2 books">2 ชิ้น</option>
+                                    <option value="3 books">3 ชิ้น</option>
+                                    <option value="4 books">4 ชิ้น</option>
+                                </select>
+                            </th>
+                            <th>
+                                <label for="quanpencilid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                                <select id="quanpencilid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                    <option value="0 book">ไม่รับสินค้า</option>
+                                    <option value="1 book">1 ชิ้น</option>
+                                    <option value="2 books">2 ชิ้น</option>
+                                    <option value="3 books">3 ชิ้น</option>
+                                    <option value="4 books">4 ชิ้น</option>
+                                </select>
+                            </th>
+                        </tr>
+                        <tr style="color: #422d20; font-family: 'THSarabun'; font-size: 25px;">
+                            <th>
+                                ผลาญ <br>เล่ม 2
+                            </th>
+                            <th>
+                                ผลาญ <br>เล่ม 3
+                            </th>
+                            <th>
+                                ผลาญ <br>เล่ม 4
+                            </th>
+                            <th>
+                                ผลาญ <br>เล่ม 5
+                            </th>
+                            <th>
+                                ผลาญ <br>เล่ม 6
+                            </th>
+                         
+                        </tr>
+                        <tr>
+                            <th style="height: 250px;"><img src="image/p2.jpg" style="height: 200px;"></th>
+                            <th style="height: 250px;"><img src="image/p3.jpg" style="height: 200px;"></th>
+                            <th style="height: 250px;"><img src="image/p4.jpg" style="height: 200px;"></th>
+                            <th style="height: 250px;"><img src="image/p5.jpg" style="height: 200px;"></th>
+                            <th style="height: 250px;"><img src="image/p6.jpg" style="height: 200px;"></th>
+                        </tr>
+                        <tr style="color: #422d20;">
+                            <th>
+                                <label for="quanbookid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                                <select id="quanbookid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                    <option value="0 book">ไม่รับสินค้า</option>
+                                    <option value="1 book">1 ชิ้น</option>
+                                    <option value="2 books">2 ชิ้น</option>
+                                    <option value="3 books">3 ชิ้น</option>
+                                    <option value="4 books">4 ชิ้น</option>
+                                </select>
+                            </th>
+                            <th>
+                                <label for="quanipadid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                                <select id="quanipadid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                    <option value="0 book">ไม่รับสินค้า</option>
+                                    <option value="1 book">1 ชิ้น</option>
+                                    <option value="2 books">2 ชิ้น</option>
+                                    <option value="3 books">3 ชิ้น</option>
+                                    <option value="4 books">4 ชิ้น</option>
+                                </select>
+                            </th>
+                            <th>
+                                <label for="quanpencilid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                                <select id="quanpencilid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                    <option value="0 book">ไม่รับสินค้า</option>
+                                    <option value="1 book">1 ชิ้น</option>
+                                    <option value="2 books">2 ชิ้น</option>
+                                    <option value="3 books">3 ชิ้น</option>
+                                    <option value="4 books">4 ชิ้น</option>
+                                </select>
+                            </th>
+                            <th>
+                                <label for="quanpencilid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                                <select id="quanpencilid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                    <option value="0 book">ไม่รับสินค้า</option>
+                                    <option value="1 book">1 ชิ้น</option>
+                                    <option value="2 books">2 ชิ้น</option>
+                                    <option value="3 books">3 ชิ้น</option>
+                                    <option value="4 books">4 ชิ้น</option>
+                                </select>
+                            </th>
+                            <th>
+                                <label for="quanpencilid" style="font-family: 'THSarabun'; font-size: 25px;">จำนวน:</label>
+                                <select id="quanpencilid" name="quan" required style="font-family: 'THSarabun'; font-size: 20px;">
+                                    <option value="0 book">ไม่รับสินค้า</option>
+                                    <option value="1 book">1 ชิ้น</option>
+                                    <option value="2 books">2 ชิ้น</option>
+                                    <option value="3 books">3 ชิ้น</option>
+                                    <option value="4 books">4 ชิ้น</option>
+                                </select>
+                            </th>
+                        </tr>
+                </table>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <input type="submit" value="ยืนยันคำสั่งซื้อ" style="font-family: 'THSarabun'; font-size: 25px; color: black;">
+            </form>
+        </div>
+        <div class="item-F item-red">
+            <address style="font-family: 'THSarabun'; color: black; font-size: 25px;text-align: center;">
+                <b>99 หมู่ที่ 18 ถ. พหลโยธิน ตำบล คลองหนึ่ง อำเภอคลองหลวง ปทุมธานี 12120</b><br>
+                <b>Line ID : @Shuwendian โทร 010-1004044</b>
+            </address>
+        </div>
+    </div>
+</body>
+</html>
